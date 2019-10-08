@@ -8,7 +8,7 @@ const app = express();
 
 mongoose.set("debug", true);
 mongoose.Promise = global.Promise;
-mongoose.connect(process.env.mongodb, { useMongoClient: true });
+mongoose.connect(process.env.mongodburi, { useMongoClient: true });
 app.use(bodyParser.json());
 
 const port = process.env.PORT || 3001;
