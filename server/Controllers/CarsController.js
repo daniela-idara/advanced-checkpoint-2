@@ -1,20 +1,20 @@
-import Car from "../Models/Car";
+const Car = require("../Models/Car");
 
-export function list(req, res) {
+exports.list = function list(req, res) {
   Car.find({}).exec()
     .then(cars => {
       return res.json(cars);
     });
-}
+};
 
-export function show(req, res) {
+exports.show = function show(req, res) {
   Car.findById(req.params.id).exec()
     .then(car => {
       return res.json(car);
     });
-}
+};
 
-export function create(req, res) {
+exports.create = function create(req, res) {
   const car = new Car({
     make: req.body.make,
     model: req.body.model,
@@ -26,15 +26,15 @@ export function create(req, res) {
     .then(cars => {
       return res.json(cars);
     });
-}
+};
 
-export function update(req, res) {
+exports.update = function update(req, res) {
   return res.json(Car[0].name = req.params.id);
-}
+};
 
-export function remove(req, res) {
+exports.remove = function remove(req, res) {
   Car.findByIdAndRemove(req.params.id).exec()
     .then(cars => {
       return res.json(cars);
     });
-}
+};

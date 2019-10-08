@@ -1,5 +1,5 @@
 /* eslint-disable indent */
-import mongoose from "mongoose";
+const mongoose = require("mongoose");
 
 const schema = new mongoose.Schema({
   make: {
@@ -24,4 +24,4 @@ const schema = new mongoose.Schema({
     },
 });
 
-export default mongoose.model("Car", schema);
+module.exports = mongoose.model("Car", schema);

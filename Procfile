@@ -1,3 +1,3 @@
 api: npm run dev
 client: cd client && npm start && cd ..
-web: node index.js
+web: node server/index.js
