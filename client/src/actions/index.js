@@ -63,4 +63,6 @@ function carDeleted(car) {
   };
 }
 
-
+export function clearForm() {
+  document.getElementById("myForm").reset();
+}

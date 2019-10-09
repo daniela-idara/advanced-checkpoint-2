@@ -21,7 +21,7 @@ class CreateCars extends React.Component {
       <div>
         <div><br />
           <h2>Add a Car</h2>
-          <form onSubmit={(e) => {
+          <form id="myForm" onSubmit={(e) => {
             e.preventDefault();
             if (this.props.addCar) {
               this.props.addCar(this.state.car);
@@ -61,14 +61,15 @@ class CreateCars extends React.Component {
                         }} />
             </div>
             <div>
-                        Engine: <input className="form-control form-control-sm" onChange={(e) => {
-                          const car = {engine: e.target.value};
-                          this.setState({
-                            car: Object.assign(this.state.car,car)
-                          });
-                        }} />
+                        Fuel Engine: <input className="form-control form-control-sm" 
+                          onChange={(e) => {
+                            const car = {engine: e.target.value};
+                            this.setState({
+                              car: Object.assign(this.state.car,car)
+                            });
+                          }} />
             </div>
-            <button>Add</button>
+            <button onClick="clearForm()">Add</button>
           </form>
         </div>
       </div>
