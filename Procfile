@@ -1,4 +1,4 @@
 api: npm run dev
 client: cd client && npm start && cd ..
-web: npm start
+web: node server/index.js
 
