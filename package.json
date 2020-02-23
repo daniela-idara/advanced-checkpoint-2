@@ -10,7 +10,8 @@
     "lint": "eslint src",
     "dev": "nodemon --exec 'babel-node server/index'",
     "test": "npm run lint",
-    "start": "nf start"
+    "start": "nf start",
+    "heroku-postbuild": "npm install"
   },
   "keywords": [],
   "author": "",
