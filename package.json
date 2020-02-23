@@ -33,7 +33,7 @@
     "eslint": "^3.19.0",
     "eslint-plugin-babel": "^4.1.0",
     "eslint-plugin-react": "^6.10.0",
-    "foreman": "^2.0.0",
+    "foreman": "^3.0.1",
     "nodemon": "^2.0.2"
   },
   "dependencies": {
